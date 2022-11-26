@@ -1,6 +1,9 @@
-<html>
-
-<h1> Meu projeto docker !!! </h1>
-
-
-</html>
+version: '3.1'
+services:
+  apache:
+    image: httpd:latest
+    container_name: my-apache-app
+    ports:
+    - '80:80'
+    volumes:
+    - ./website:/usr/local/apache2/htdocs
